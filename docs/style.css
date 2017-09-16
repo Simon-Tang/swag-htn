@@ -1,0 +1,9 @@
+#main-content {
+  font-family: monospace;
+  max-width: 800px;
+
+  margin: 40px auto;
+  padding: 20px;
+
+  border: 5px black dotted;
+}
