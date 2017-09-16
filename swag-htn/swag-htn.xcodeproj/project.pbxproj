@@ -14,6 +14,7 @@
 		517909601F6D24D600F26C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5179095E1F6D24D600F26C25 /* Main.storyboard */; };
 		517909621F6D24D600F26C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517909611F6D24D600F26C25 /* Assets.xcassets */; };
 		517909651F6D24D600F26C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517909631F6D24D600F26C25 /* LaunchScreen.storyboard */; };
+		51AC2D431F6DA91300C8AA06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC2D421F6DA91300C8AA06 /* LoginViewController.swift */; };
 		6159504102BD634D10D1FC8F /* Pods_swag_htn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9785066EC4CCCFDC94B0EC67 /* Pods_swag_htn.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,8 @@
 		517909611F6D24D600F26C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		517909641F6D24D600F26C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		517909661F6D24D600F26C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51AC2D421F6DA91300C8AA06 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		51AC2D441F6DAA2F00C8AA06 /* swag-htn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "swag-htn.entitlements"; sourceTree = "<group>"; };
 		9785066EC4CCCFDC94B0EC67 /* Pods_swag_htn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swag_htn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8543DB858CC117AE6F2D902 /* Pods-swag-htn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swag-htn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swag-htn/Pods-swag-htn.debug.xcconfig"; sourceTree = "<group>"; };
 		BCF052D0BDF16D743F5BE26C /* Pods-swag-htn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swag-htn.release.xcconfig"; path = "Pods/Target Support Files/Pods-swag-htn/Pods-swag-htn.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		517909591F6D24D600F26C25 /* swag-htn */ = {
 			isa = PBXGroup;
 			children = (
+				51AC2D441F6DAA2F00C8AA06 /* swag-htn.entitlements */,
 				5179095A1F6D24D600F26C25 /* AppDelegate.swift */,
 				5179095C1F6D24D600F26C25 /* ViewController.swift */,
 				5179095E1F6D24D600F26C25 /* Main.storyboard */,
@@ -82,6 +86,7 @@
 				2B3336011F6D2E110009BB26 /* GoogleService-Info.plist */,
 				2B3336031F6D4F010009BB26 /* PaintViewController.swift */,
 				517909661F6D24D600F26C25 /* Info.plist */,
+				51AC2D421F6DA91300C8AA06 /* LoginViewController.swift */,
 			);
 			path = "swag-htn";
 			sourceTree = "<group>";
@@ -130,6 +135,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 9DY7MV95KW;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -235,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51AC2D431F6DA91300C8AA06 /* LoginViewController.swift in Sources */,
 				5179095D1F6D24D600F26C25 /* ViewController.swift in Sources */,
 				2B3336041F6D4F010009BB26 /* PaintViewController.swift in Sources */,
 				5179095B1F6D24D600F26C25 /* AppDelegate.swift in Sources */,
@@ -361,6 +372,7 @@
 			baseConfigurationReference = A8543DB858CC117AE6F2D902 /* Pods-swag-htn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "swag-htn/swag-htn.entitlements";
 				DEVELOPMENT_TEAM = 9DY7MV95KW;
 				INFOPLIST_FILE = "swag-htn/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -376,6 +388,7 @@
 			baseConfigurationReference = BCF052D0BDF16D743F5BE26C /* Pods-swag-htn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "swag-htn/swag-htn.entitlements";
 				DEVELOPMENT_TEAM = 9DY7MV95KW;
 				INFOPLIST_FILE = "swag-htn/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
