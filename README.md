@@ -1,11 +1,3 @@
 # Untitled Project
 
-TODO: description.
-
-## Installation
-
-TODO: installation instructions.
-
-## Usage
-
-TODO: usage instructions.
+See [the docs](http://stang.xyz/swag-htn/) for the latest documentation.
