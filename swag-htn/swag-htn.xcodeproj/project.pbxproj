@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B3336021F6D2E110009BB26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B3336011F6D2E110009BB26 /* GoogleService-Info.plist */; };
 		2B3336041F6D4F010009BB26 /* PaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3336031F6D4F010009BB26 /* PaintViewController.swift */; };
+		2B3336061F6DAA570009BB26 /* brush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3336051F6DAA570009BB26 /* brush.swift */; };
 		5179095B1F6D24D600F26C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179095A1F6D24D600F26C25 /* AppDelegate.swift */; };
 		5179095D1F6D24D600F26C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179095C1F6D24D600F26C25 /* ViewController.swift */; };
 		517909601F6D24D600F26C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5179095E1F6D24D600F26C25 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		2B3336011F6D2E110009BB26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B3336031F6D4F010009BB26 /* PaintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintViewController.swift; sourceTree = "<group>"; };
+		2B3336051F6DAA570009BB26 /* brush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = brush.swift; sourceTree = "<group>"; };
 		517909571F6D24D600F26C25 /* swag-htn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swag-htn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5179095A1F6D24D600F26C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5179095C1F6D24D600F26C25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				2B3336011F6D2E110009BB26 /* GoogleService-Info.plist */,
 				2B3336031F6D4F010009BB26 /* PaintViewController.swift */,
 				517909661F6D24D600F26C25 /* Info.plist */,
+				2B3336051F6DAA570009BB26 /* brush.swift */,
 			);
 			path = "swag-htn";
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			files = (
 				5179095D1F6D24D600F26C25 /* ViewController.swift in Sources */,
 				2B3336041F6D4F010009BB26 /* PaintViewController.swift in Sources */,
+				2B3336061F6DAA570009BB26 /* brush.swift in Sources */,
 				5179095B1F6D24D600F26C25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
