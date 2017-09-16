@@ -38,6 +38,7 @@
                                 <rect key="frame" x="114" y="417" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.72882813069404584" green="0.92976782397437674" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signInDidTouch:" destination="P6h-Su-oRB" eventType="touchUpInside" id="eZ0-vV-YHP"/>
@@ -194,8 +195,8 @@
                                 <rect key="frame" x="0.0" y="574" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Draw" width="85.5" id="1Bx-Ma-6JR"/>
-                                    <barButtonItem title="Erase" width="152" id="Mxu-OY-vf6"/>
+                                    <barButtonItem title="Draw" width="100.5" id="1Bx-Ma-6JR"/>
+                                    <barButtonItem title="Erase" width="142" id="Mxu-OY-vf6"/>
                                     <barButtonItem systemItem="undo" id="Rn0-RG-oCG"/>
                                 </items>
                             </toolbar>
