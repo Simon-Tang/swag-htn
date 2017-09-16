@@ -1,0 +1,6 @@
+framework module Pods_swag_htn {
+  umbrella header "Pods-swag-htn-umbrella.h"
+
+  export *
+  module * { export * }
+}

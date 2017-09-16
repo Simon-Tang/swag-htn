@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B3336001F6D27AA0009BB26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B3335FF1F6D27AA0009BB26 /* GoogleService-Info.plist */; };
 		5179095B1F6D24D600F26C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179095A1F6D24D600F26C25 /* AppDelegate.swift */; };
 		5179095D1F6D24D600F26C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179095C1F6D24D600F26C25 /* ViewController.swift */; };
 		517909601F6D24D600F26C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5179095E1F6D24D600F26C25 /* Main.storyboard */; };
 		517909621F6D24D600F26C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517909611F6D24D600F26C25 /* Assets.xcassets */; };
 		517909651F6D24D600F26C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517909631F6D24D600F26C25 /* LaunchScreen.storyboard */; };
+		6159504102BD634D10D1FC8F /* Pods_swag_htn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9785066EC4CCCFDC94B0EC67 /* Pods_swag_htn.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B3335FF1F6D27AA0009BB26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		517909571F6D24D600F26C25 /* swag-htn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swag-htn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5179095A1F6D24D600F26C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5179095C1F6D24D600F26C25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		517909611F6D24D600F26C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		517909641F6D24D600F26C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		517909661F6D24D600F26C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9785066EC4CCCFDC94B0EC67 /* Pods_swag_htn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swag_htn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8543DB858CC117AE6F2D902 /* Pods-swag-htn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swag-htn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swag-htn/Pods-swag-htn.debug.xcconfig"; sourceTree = "<group>"; };
+		BCF052D0BDF16D743F5BE26C /* Pods-swag-htn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swag-htn.release.xcconfig"; path = "Pods/Target Support Files/Pods-swag-htn/Pods-swag-htn.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6159504102BD634D10D1FC8F /* Pods_swag_htn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C7AD1B0D1905FE30C0140BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8543DB858CC117AE6F2D902 /* Pods-swag-htn.debug.xcconfig */,
+				BCF052D0BDF16D743F5BE26C /* Pods-swag-htn.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5179094E1F6D24D600F26C25 = {
 			isa = PBXGroup;
 			children = (
 				517909591F6D24D600F26C25 /* swag-htn */,
 				517909581F6D24D600F26C25 /* Products */,
+				1C7AD1B0D1905FE30C0140BC /* Pods */,
+				96148258BA184103F8BED4F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +78,17 @@
 				517909611F6D24D600F26C25 /* Assets.xcassets */,
 				517909631F6D24D600F26C25 /* LaunchScreen.storyboard */,
 				517909661F6D24D600F26C25 /* Info.plist */,
+				2B3335FF1F6D27AA0009BB26 /* GoogleService-Info.plist */,
 			);
 			path = "swag-htn";
+			sourceTree = "<group>";
+		};
+		96148258BA184103F8BED4F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9785066EC4CCCFDC94B0EC67 /* Pods_swag_htn.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 517909691F6D24D600F26C25 /* Build configuration list for PBXNativeTarget "swag-htn" */;
 			buildPhases = (
+				1DE47267591CF293B28D9175 /* [CP] Check Pods Manifest.lock */,
 				517909531F6D24D600F26C25 /* Sources */,
 				517909541F6D24D600F26C25 /* Frameworks */,
 				517909551F6D24D600F26C25 /* Resources */,
+				9C8725CD89532C48D87BC0E5 /* [CP] Embed Pods Frameworks */,
+				23936397C62E20F7FBC6D390 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +154,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				517909651F6D24D600F26C25 /* LaunchScreen.storyboard in Resources */,
+				2B3336001F6D27AA0009BB26 /* GoogleService-Info.plist in Resources */,
 				517909621F6D24D600F26C25 /* Assets.xcassets in Resources */,
 				517909601F6D24D600F26C25 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DE47267591CF293B28D9175 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swag-htn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23936397C62E20F7FBC6D390 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swag-htn/Pods-swag-htn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C8725CD89532C48D87BC0E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-swag-htn/Pods-swag-htn-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swag-htn/Pods-swag-htn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		517909531F6D24D600F26C25 /* Sources */ = {
@@ -258,6 +347,7 @@
 		};
 		5179096A1F6D24D600F26C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8543DB858CC117AE6F2D902 /* Pods-swag-htn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9DY7MV95KW;
@@ -271,6 +361,7 @@
 		};
 		5179096B1F6D24D600F26C25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCF052D0BDF16D743F5BE26C /* Pods-swag-htn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9DY7MV95KW;
@@ -301,6 +392,7 @@
 				5179096B1F6D24D600F26C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
