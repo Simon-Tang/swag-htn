@@ -52,7 +52,6 @@ class ViewController: UIViewController {
         museumButton.layer.cornerRadius = 10
         galleryButton.layer.cornerRadius = 10
         artistsButton.layer.cornerRadius = 10
-
         
     }
 
