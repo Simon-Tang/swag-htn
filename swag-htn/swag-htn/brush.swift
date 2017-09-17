@@ -45,9 +45,36 @@ public class Brush: NSObject, DrawProtocol {
         
     }
     
+    func drawCircleAt(x: CGFloat, y: CGFloat){
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: x,y: y), radius: CGFloat(3), startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)
+        
+        //let shapeLayer = CAShapeLayer()
+        //shapeLayer.path = circlePath.cgPath
+        
+        //change the fill color
+        //shapeLayer.fillColor = self.color.cgColor
+        //you can change the stroke color
+        //shapeLayer.strokeColor = self.color.cgColor
+        //you can change the line width
+        //shapeLayer.lineWidth = 2.0
+        
+        //view.layer.addSublayer(shapeLayer)
+        let context: CGContext? = UIGraphicsGetCurrentContext()!;
+        
+        if context != nil {
+            context!.addPath(circlePath.cgPath)
+            context!.setLineWidth(2.0)
+            context!.setStrokeColor(self.color.cgColor)
+            context!.setFillColor(self.color.cgColor)
+            //context.setBlendMode(CGBlendMode.normal);
+            //context.setAlpha(1.0);
+            context!.strokePath()
+        }
+    }
+    
     func addPoint(point: CGPoint) {
         
-        if ctr == 0 {
+        if ctr == 0 || true {
             previous = point
             current = point
             
@@ -86,18 +113,18 @@ public class Brush: NSObject, DrawProtocol {
     }
     
     func draw() {
-        let context: CGContext = UIGraphicsGetCurrentContext()!;
+        if previous != nil || current != nil {
+            let context: CGContext = UIGraphicsGetCurrentContext()!;
         
-        context.addPath(path.cgPath);
-        context.setLineCap(CGLineCap.round);
-        context.setLineWidth(self.width);
-        context.setStrokeColor(self.color.cgColor);
-        context.setBlendMode(CGBlendMode.normal);
-        context.setAlpha(1.0);
-        context.strokePath();
+            context.addPath(path.cgPath);
+            context.setLineCap(CGLineCap.round);
+            context.setLineWidth(self.width);
+            context.setStrokeColor(self.color.cgColor);
+            context.setBlendMode(CGBlendMode.normal);
+            context.setAlpha(1.0);
+            context.strokePath();
+        }
     }
-    
-    ///MARK: Private Helpers
     
     // Find the midpoint
     private func  midPoint(p1: CGPoint, p2: CGPoint) -> CGPoint {
