@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B3336021F6D2E110009BB26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B3336011F6D2E110009BB26 /* GoogleService-Info.plist */; };
-		2B3336041F6D4F010009BB26 /* PaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3336031F6D4F010009BB26 /* PaintViewController.swift */; };
+		2B3336041F6D4F010009BB26 /* PaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3336031F6D4F010009BB26 /* PaintView.swift */; };
 		2B3336061F6DAA570009BB26 /* brush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3336051F6DAA570009BB26 /* brush.swift */; };
 		5179095B1F6D24D600F26C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179095A1F6D24D600F26C25 /* AppDelegate.swift */; };
 		5179095D1F6D24D600F26C25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179095C1F6D24D600F26C25 /* ViewController.swift */; };
@@ -17,11 +17,12 @@
 		517909651F6D24D600F26C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517909631F6D24D600F26C25 /* LaunchScreen.storyboard */; };
 		51AC2D431F6DA91300C8AA06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC2D421F6DA91300C8AA06 /* LoginViewController.swift */; };
 		6159504102BD634D10D1FC8F /* Pods_swag_htn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9785066EC4CCCFDC94B0EC67 /* Pods_swag_htn.framework */; };
+		E1777C631F6E10F900D5E9CE /* PaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1777C621F6E10F900D5E9CE /* PaintViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B3336011F6D2E110009BB26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		2B3336031F6D4F010009BB26 /* PaintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintViewController.swift; sourceTree = "<group>"; };
+		2B3336031F6D4F010009BB26 /* PaintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintView.swift; sourceTree = "<group>"; };
 		2B3336051F6DAA570009BB26 /* brush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = brush.swift; sourceTree = "<group>"; };
 		517909571F6D24D600F26C25 /* swag-htn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swag-htn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5179095A1F6D24D600F26C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +36,7 @@
 		9785066EC4CCCFDC94B0EC67 /* Pods_swag_htn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swag_htn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8543DB858CC117AE6F2D902 /* Pods-swag-htn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swag-htn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swag-htn/Pods-swag-htn.debug.xcconfig"; sourceTree = "<group>"; };
 		BCF052D0BDF16D743F5BE26C /* Pods-swag-htn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swag-htn.release.xcconfig"; path = "Pods/Target Support Files/Pods-swag-htn/Pods-swag-htn.release.xcconfig"; sourceTree = "<group>"; };
+		E1777C621F6E10F900D5E9CE /* PaintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaintViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +83,13 @@
 			children = (
 				51AC2D441F6DAA2F00C8AA06 /* swag-htn.entitlements */,
 				5179095A1F6D24D600F26C25 /* AppDelegate.swift */,
+				E1777C621F6E10F900D5E9CE /* PaintViewController.swift */,
 				5179095C1F6D24D600F26C25 /* ViewController.swift */,
 				5179095E1F6D24D600F26C25 /* Main.storyboard */,
 				517909611F6D24D600F26C25 /* Assets.xcassets */,
 				517909631F6D24D600F26C25 /* LaunchScreen.storyboard */,
 				2B3336011F6D2E110009BB26 /* GoogleService-Info.plist */,
-				2B3336031F6D4F010009BB26 /* PaintViewController.swift */,
+				2B3336031F6D4F010009BB26 /* PaintView.swift */,
 				517909661F6D24D600F26C25 /* Info.plist */,
 				2B3336051F6DAA570009BB26 /* brush.swift */,
 				51AC2D421F6DA91300C8AA06 /* LoginViewController.swift */,
@@ -249,8 +252,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				51AC2D431F6DA91300C8AA06 /* LoginViewController.swift in Sources */,
+				E1777C631F6E10F900D5E9CE /* PaintViewController.swift in Sources */,
 				5179095D1F6D24D600F26C25 /* ViewController.swift in Sources */,
-				2B3336041F6D4F010009BB26 /* PaintViewController.swift in Sources */,
+				2B3336041F6D4F010009BB26 /* PaintView.swift in Sources */,
 				2B3336061F6DAA570009BB26 /* brush.swift in Sources */,
 				5179095B1F6D24D600F26C25 /* AppDelegate.swift in Sources */,
 			);

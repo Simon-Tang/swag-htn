@@ -61,9 +61,12 @@ public class Brush: NSObject, DrawProtocol {
             previous = current
             current = point
             
-            let midpoint = midPoint(p1: current!, p2: previous!)
-            path.addQuadCurve(to: midpoint, controlPoint: previous!)
-            ctr = 1
+            if current != nil && previous != nil {
+                let midpoint = midPoint(p1: current!, p2: previous!)
+                path.addQuadCurve(to: midpoint, controlPoint: previous!)
+                ctr = 1
+            }
+            
         }
     }
     
