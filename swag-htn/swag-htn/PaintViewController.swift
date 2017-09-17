@@ -12,18 +12,13 @@ import Firebase
 import FirebaseAuth
 import GoogleSignIn
 
-
-
 class PaintViewController: UIViewController {
     
     @IBOutlet weak var penButton: UIButton!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-  
         penButton.setBackgroundImage(UIImage(named: "fountain-pen-close-up (2).png"), for: UIControlState.normal)
-
     }
     
     override func didReceiveMemoryWarning() {
