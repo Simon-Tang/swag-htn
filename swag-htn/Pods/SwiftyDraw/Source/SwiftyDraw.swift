@@ -74,6 +74,20 @@ extension SwiftyDrawViewDelegate {
     }
 }
 
+public struct Line {
+    var path    : CGMutablePath
+    var color   : UIColor
+    var width   : CGFloat
+    var opacity : CGFloat
+    
+    init(path : CGMutablePath, color: UIColor, width: CGFloat, opacity: CGFloat) {
+        self.path    = path
+        self.color   = color
+        self.width   = width
+        self.opacity = opacity
+    }
+}
+
 /// UIView Subclass where touch gestures are translated into Core Graphics drawing
 
 open class SwiftyDrawView: UIView {
@@ -95,24 +109,10 @@ open class SwiftyDrawView: UIView {
     public var delegate               : SwiftyDrawViewDelegate?
     
     
-    private var pathArray             : [Line]    = []
+    public var pathArray             : [Line]    = []
     public var currentPoint          : CGPoint   = CGPoint()
     public var previousPoint         : CGPoint   = CGPoint()
     private var previousPreviousPoint : CGPoint   = CGPoint()
-    
-    private struct Line {
-        var path    : CGMutablePath
-        var color   : UIColor
-        var width   : CGFloat
-        var opacity : CGFloat
-        
-        init(path : CGMutablePath, color: UIColor, width: CGFloat, opacity: CGFloat) {
-            self.path    = path
-            self.color   = color
-            self.width   = width
-            self.opacity = opacity
-        }
-    }
     
     /// Public init(frame:) implementation
     

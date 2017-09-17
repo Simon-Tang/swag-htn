@@ -12,5 +12,5 @@ target 'swag-htn' do
   pod 'Firebase/Auth'  
   pod 'GoogleSignIn'
   pod 'SwiftyDraw'
-
+  pod 'Firebase/Storage'
 end

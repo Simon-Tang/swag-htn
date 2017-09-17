@@ -6,10 +6,24 @@
 //
 //
 
+import FirebaseCore
+import FirebaseStorage
 import UIKit
 import SwiftyDraw
 
+extension UIImage {
+    convenience init(view: UIView) {
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.init(cgImage: (image?.cgImage)!)
+    }
+}
+
 class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
+    
+    
     
     var drawView : SwiftyDrawView!
     
@@ -28,7 +42,14 @@ class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
     @IBOutlet weak var magentaButton: UIButton!
     @IBOutlet weak var whiteButton: UIButton!
     
+    
+    
     override func viewDidLoad() {
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let imagesRef = storageRef.child("images")
+        let imageRef = storageRef.child("images/img.jpg")
+        
         super.viewDidLoad()
         penButton.setBackgroundImage(UIImage(named: "fountain-pen-close-up (2).png"), for: UIControlState.normal)
         //drawView = SwiftyDrawView(frame: myView.frame)
@@ -49,6 +70,7 @@ class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
         myView.addSubview(drawView)
         //drawView.lineColor = UIColor.black
         drawView.lineWidth = CGFloat(6)
+        DownloadImageUpdated()
     }
     
     override func didReceiveMemoryWarning() {
@@ -121,7 +143,38 @@ class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
     }
     
     func SwiftyDrawDidFinishDrawing(view: SwiftyDrawView) {
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let imageRef = storageRef.child("images/img.jpg")
+        
         print("Did finish drawing")
+        let image = UIImage(view: myView)
+        let imageData = UIImageJPEGRepresentation(image, 1.0)
+        imageRef.putData(imageData!, metadata: nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                // Uh-oh, an error occurred!
+                return
+            }
+            // Metadata contains file metadata such as size, content-type, and download URL.
+            let downloadURL = metadata.downloadURL
+        }
+        DownloadImageUpdated()
+    }
+    
+    func DownloadImageUpdated(){
+        let pathReference = Storage.storage().reference(withPath: "images/img.jpg")
+        pathReference.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            if let error = error {
+                // Uh-oh, an error occurred!
+            } else {
+                // Data for "images/island.jpg" is returned
+                //UIGraphicsBeginImageContext(self.myView.frame.size)
+                let image = UIImage(data: data!)
+                //image?.draw(in: myView.bounds)
+                //UIGraphicsEndImageContext()
+                self.myView.backgroundColor = UIColor(patternImage: image!)
+            }
+        }
     }
     
     /*
