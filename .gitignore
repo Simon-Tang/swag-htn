@@ -4,6 +4,7 @@
 
 ## Get rid of DS_Store 
 */.DS_Store
+.DS_Store
 
 ## User settings
 xcuserdata/
