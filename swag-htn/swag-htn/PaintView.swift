@@ -47,6 +47,7 @@ class DrawArtView: UIView {
         self.backgroundColor = UIColor.clear
     }
     
+    
     // Cause UIView is stupid and doesn't have a no arg init to override. It calls some
     // superclass's (probs NSObject) no arg constructor, but you can't override it.
     convenience init() {

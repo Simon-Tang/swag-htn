@@ -18,9 +18,13 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        btnSignIn.layer.cornerRadius = 10
+        btnSignUp.layer.cornerRadius = 10
+        
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -76,6 +80,25 @@ class LoginViewController: UIViewController {
             } else {
                 print("ERRORRRRR2")
             }
+        }
+    }
+    
+    @IBDesignable class MyButton: UIButton
+    {
+        override func layoutSubviews() {
+            super.layoutSubviews()
+            
+            updateCornerRadius()
+        }
+        
+        @IBInspectable var rounded: Bool = false {
+            didSet {
+                updateCornerRadius()
+            }
+        }
+        
+        func updateCornerRadius() {
+            layer.cornerRadius = rounded ? frame.size.height / 2 : 0
         }
     }
     
