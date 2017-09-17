@@ -158,7 +158,7 @@ class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
             // Metadata contains file metadata such as size, content-type, and download URL.
             let downloadURL = metadata.downloadURL
         }
-        
+        DownloadImageUpdated()
     }
     
     func DownloadImageUpdated(){
