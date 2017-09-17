@@ -17,6 +17,7 @@ class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
     @IBOutlet weak var myView: UIView!
     @IBOutlet weak var opacitySlider: UISlider!
     @IBOutlet weak var thicknessSlider: UISlider!
+    @IBOutlet weak var inkProgress: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +54,6 @@ class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
     }
     
     
-    
     func SwiftyDrawDidBeginDrawing(view: SwiftyDrawView) {
         print("Did begin drawing")
         //UIView.animate(withDuration: 0.5, animations: {
@@ -64,6 +64,19 @@ class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
     
     func SwiftyDrawIsDrawing(view: SwiftyDrawView) {
         print("Is Drawing")
+        var inkX : CGFloat = drawView.currentPoint.x - drawView.previousPoint.x
+        if inkX < 0 {
+            inkX = inkX * -1.0
+        }
+        var inkY : CGFloat = drawView.currentPoint.y - drawView.previousPoint.y
+        if inkY < 0 {
+            inkY = inkY * -1.0
+        }
+        let ink : CGFloat = (inkX + inkY) / 2250.0
+        inkProgress.progress = inkProgress.progress - Float(ink)
+        if(inkProgress.progress <= 0) {
+            drawView.drawingEnabled = false
+        }
     }
     
     func SwiftyDrawDidCancelDrawing(view: SwiftyDrawView) {

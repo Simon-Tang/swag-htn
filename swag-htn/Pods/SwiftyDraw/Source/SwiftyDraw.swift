@@ -96,8 +96,8 @@ open class SwiftyDrawView: UIView {
     
     
     private var pathArray             : [Line]    = []
-    private var currentPoint          : CGPoint   = CGPoint()
-    private var previousPoint         : CGPoint   = CGPoint()
+    public var currentPoint          : CGPoint   = CGPoint()
+    public var previousPoint         : CGPoint   = CGPoint()
     private var previousPreviousPoint : CGPoint   = CGPoint()
     
     private struct Line {
