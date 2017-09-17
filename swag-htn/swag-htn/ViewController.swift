@@ -13,6 +13,7 @@ import GoogleSignIn
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var artistprofileButton: UIButton!
     @IBOutlet weak var collaborateButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var museumButton: UIButton!
@@ -47,6 +48,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        artistprofileButton.layer.cornerRadius = 10
         collaborateButton.layer.cornerRadius = 10
         continueButton.layer.cornerRadius = 10
         museumButton.layer.cornerRadius = 10
