@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P6h-Su-oRB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P6h-Su-oRB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vcg-QQ-NS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863.2" y="34.632683658170919"/>
+            <point key="canvasLocation" x="1870" y="102"/>
         </scene>
         <!--MainMenu-->
         <scene sceneID="tne-QT-ifu">
@@ -218,7 +218,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="mgF-nm-GYZ" kind="show" id="Jzo-V8-r3S"/>
+                                    <segue destination="jsW-bS-MCk" kind="show" id="wqj-aP-en9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drp-xp-eUI">
@@ -352,20 +352,63 @@
             <point key="canvasLocation" x="996" y="-718"/>
         </scene>
         <!--My Museum-->
-        <scene sceneID="PeH-HD-bHf">
+        <scene sceneID="FsD-iq-BBL">
             <objects>
-                <viewController title="My Museum" id="mgF-nm-GYZ" sceneMemberID="viewController">
-                    <label key="view" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ny3-kY-VzO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                <viewController title="My Museum" id="jsW-bS-MCk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2gc-HI-LfR"/>
+                        <viewControllerLayoutGuide type="bottom" id="QVP-u1-0OR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VQo-ZV-dt3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="229-X3-vKs">
+                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lyr-Nz-Yau">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2017-09-17 at 3.46.22 AM" translatesAutoresizingMaskIntoConstraints="NO" id="9eU-Gp-ARl">
+                                                <rect key="frame" x="67" y="736" width="240" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2017-09-17 at 3.46.22 AM" translatesAutoresizingMaskIntoConstraints="NO" id="Ul0-Ze-zzU">
+                                                <rect key="frame" x="67" y="8" width="240" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1000" id="lJc-ln-JEM"/>
+                                            <constraint firstAttribute="height" constant="1000" id="ynY-Jm-ReZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Lyr-Nz-Yau" firstAttribute="leading" secondItem="229-X3-vKs" secondAttribute="leading" id="fd9-nn-D3t"/>
+                                    <constraint firstItem="Lyr-Nz-Yau" firstAttribute="top" secondItem="229-X3-vKs" secondAttribute="top" id="ptZ-Px-VWE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lyr-Nz-Yau" secondAttribute="trailing" id="woc-um-dN5"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lyr-Nz-Yau" secondAttribute="bottom" id="yxf-E5-Jn2"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="229-X3-vKs" secondAttribute="trailing" id="B46-yy-UK3"/>
+                            <constraint firstItem="QVP-u1-0OR" firstAttribute="top" secondItem="229-X3-vKs" secondAttribute="bottom" id="D11-qt-5eE"/>
+                            <constraint firstItem="229-X3-vKs" firstAttribute="top" secondItem="2gc-HI-LfR" secondAttribute="bottom" id="IJC-iJ-LYB"/>
+                            <constraint firstItem="229-X3-vKs" firstAttribute="leading" secondItem="VQo-ZV-dt3" secondAttribute="leading" id="bOJ-yk-pyL"/>
+                            <constraint firstItem="Lyr-Nz-Yau" firstAttribute="width" secondItem="VQo-ZV-dt3" secondAttribute="width" id="dMU-zC-bRg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Museum" id="pIO-g8-mhU"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ERy-f3-3do" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIW-6L-znY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865" y="-646"/>
+            <point key="canvasLocation" x="1869.5999999999999" y="-716.49175412293857"/>
         </scene>
         <!--Artists-->
         <scene sceneID="dgY-05-oT1">
@@ -416,6 +459,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Screen Shot 2017-09-17 at 3.46.22 AM" width="560" height="404"/>
         <image name="crowdart" width="720" height="405"/>
     </resources>
 </document>
