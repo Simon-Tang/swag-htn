@@ -323,7 +323,7 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="37.331334332833585"/>
         </scene>
-        <!--View Controller-->
+        <!--My Artist Profile-->
         <scene sceneID="Fjk-Ks-ee6">
             <objects>
                 <viewController id="8ro-eD-27z" sceneMemberID="viewController">
@@ -336,6 +336,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="My Artist Profile" id="hnZ-l1-8rY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etl-63-jdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -352,7 +353,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <navigationItem key="navigationItem" title="My Artist Profile" id="JPt-OO-R2q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERy-f3-3do" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
