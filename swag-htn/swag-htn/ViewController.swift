@@ -54,6 +54,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
  
+    @IBOutlet weak var btnPaint: UIButton!
+    @IBAction func btnPaintPress(_ sender: Any) {
+        self.performSegue(withIdentifier: "paint", sender: nil)
+    }
     
 }
 

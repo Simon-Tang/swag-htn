@@ -16,6 +16,7 @@
 		517909621F6D24D600F26C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517909611F6D24D600F26C25 /* Assets.xcassets */; };
 		517909651F6D24D600F26C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517909631F6D24D600F26C25 /* LaunchScreen.storyboard */; };
 		51AC2D431F6DA91300C8AA06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC2D421F6DA91300C8AA06 /* LoginViewController.swift */; };
+		51AC2D481F6DDE2F00C8AA06 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC2D471F6DDE2F00C8AA06 /* DrawViewController.swift */; };
 		6159504102BD634D10D1FC8F /* Pods_swag_htn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9785066EC4CCCFDC94B0EC67 /* Pods_swag_htn.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		517909661F6D24D600F26C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51AC2D421F6DA91300C8AA06 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		51AC2D441F6DAA2F00C8AA06 /* swag-htn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "swag-htn.entitlements"; sourceTree = "<group>"; };
+		51AC2D471F6DDE2F00C8AA06 /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
 		9785066EC4CCCFDC94B0EC67 /* Pods_swag_htn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swag_htn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8543DB858CC117AE6F2D902 /* Pods-swag-htn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swag-htn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swag-htn/Pods-swag-htn.debug.xcconfig"; sourceTree = "<group>"; };
 		BCF052D0BDF16D743F5BE26C /* Pods-swag-htn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swag-htn.release.xcconfig"; path = "Pods/Target Support Files/Pods-swag-htn/Pods-swag-htn.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				517909661F6D24D600F26C25 /* Info.plist */,
 				2B3336051F6DAA570009BB26 /* brush.swift */,
 				51AC2D421F6DA91300C8AA06 /* LoginViewController.swift */,
+				51AC2D471F6DDE2F00C8AA06 /* DrawViewController.swift */,
 			);
 			path = "swag-htn";
 			sourceTree = "<group>";
@@ -194,7 +197,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		23936397C62E20F7FBC6D390 /* [CP] Copy Pods Resources */ = {
@@ -248,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51AC2D481F6DDE2F00C8AA06 /* DrawViewController.swift in Sources */,
 				51AC2D431F6DA91300C8AA06 /* LoginViewController.swift in Sources */,
 				5179095D1F6D24D600F26C25 /* ViewController.swift in Sources */,
 				2B3336041F6D4F010009BB26 /* PaintViewController.swift in Sources */,
