@@ -93,14 +93,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6EK-ar-khU">
-                                <rect key="frame" x="102" y="552" width="258" height="31"/>
+                                <rect key="frame" x="102" y="595" width="258" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="opacitySliderValueDidChange:" destination="tqO-Js-yY7" eventType="valueChanged" id="OhH-Nf-MHq"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQn-nA-xHU">
-                                <rect key="frame" x="16" y="557" width="80" height="21"/>
+                                <rect key="frame" x="16" y="600" width="80" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -128,30 +128,87 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fey-AH-c8V">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem title="Draw" width="79" id="vSX-is-3X9"/>
-                                    <barButtonItem title="Erase" width="79" id="zcS-Og-Alb"/>
-                                    <barButtonItem title="Undo" width="79" id="jFF-9H-TAH"/>
-                                    <barButtonItem title="Colour" width="79" id="dii-w8-DDb"/>
-                                </items>
-                            </toolbar>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MwQ-st-PNh">
-                                <rect key="frame" x="103" y="586" width="257" height="31"/>
+                                <rect key="frame" x="103" y="629" width="257" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="thicknessSliderValueDidChange:" destination="tqO-Js-yY7" eventType="valueChanged" id="7ma-vF-TcY"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thickness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eew-5Z-eom">
-                                <rect key="frame" x="17" y="591" width="80" height="21"/>
+                                <rect key="frame" x="17" y="634" width="80" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCM-Is-dtP">
+                                <rect key="frame" x="17" y="562" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="onTouchBlackColor:" destination="tqO-Js-yY7" eventType="touchUpInside" id="DGu-lr-DhZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jc0-jf-S3H">
+                                <rect key="frame" x="55" y="562" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onTouchRedColor:" destination="tqO-Js-yY7" eventType="touchUpInside" id="qU4-nb-ePv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xr-g0-Wql">
+                                <rect key="frame" x="93" y="562" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onTouchYellowColor:" destination="tqO-Js-yY7" eventType="touchUpInside" id="Y1D-eM-NhF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGF-fq-ngH">
+                                <rect key="frame" x="131" y="562" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onTouchGreenColor:" destination="tqO-Js-yY7" eventType="touchUpInside" id="01d-k9-uis"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQe-xL-whD">
+                                <rect key="frame" x="169" y="562" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onTouchCyanColor:" destination="tqO-Js-yY7" eventType="touchUpInside" id="I7Y-5U-wGR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8p-W1-0JO">
+                                <rect key="frame" x="207" y="562" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onTouchBlueColor:" destination="tqO-Js-yY7" eventType="touchUpInside" id="E2R-kB-18k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsg-tN-izL">
+                                <rect key="frame" x="245" y="562" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onTouchMagentaColor:" destination="tqO-Js-yY7" eventType="touchUpInside" id="WTA-Sb-TDQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gr-yZ-fu1">
+                                <rect key="frame" x="283" y="562" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTouchWhiteColor:" destination="tqO-Js-yY7" eventType="touchUpInside" id="ha7-Z4-7E0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -162,16 +219,24 @@
                     </view>
                     <navigationItem key="navigationItem" title="Collaborate" id="ae3-sN-nvG"/>
                     <connections>
+                        <outlet property="blackButton" destination="dCM-Is-dtP" id="ZEK-kX-x9s"/>
+                        <outlet property="blueButton" destination="m8p-W1-0JO" id="iKp-qS-42z"/>
+                        <outlet property="cyanButton" destination="oQe-xL-whD" id="xgz-bv-hdc"/>
+                        <outlet property="greenButton" destination="wGF-fq-ngH" id="Y4h-El-QIf"/>
                         <outlet property="inkProgress" destination="deA-dG-18H" id="Nwe-g0-kD7"/>
+                        <outlet property="magentaButton" destination="Rsg-tN-izL" id="NFm-UX-Yeh"/>
                         <outlet property="myView" destination="fDR-ck-Afn" id="YtP-FR-iNL"/>
                         <outlet property="opacitySlider" destination="6EK-ar-khU" id="5ff-8r-67Q"/>
                         <outlet property="penButton" destination="oyn-uq-bIJ" id="ACJ-jS-YjB"/>
+                        <outlet property="redButton" destination="jc0-jf-S3H" id="8tS-bT-56U"/>
                         <outlet property="thicknessSlider" destination="MwQ-st-PNh" id="uT2-dd-1iP"/>
+                        <outlet property="whiteButton" destination="3Gr-yZ-fu1" id="Axq-CH-H77"/>
+                        <outlet property="yellowButton" destination="5xr-g0-Wql" id="sUJ-sP-dq7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vcg-QQ-NS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="102"/>
+            <point key="canvasLocation" x="1869.5999999999999" y="101.19940029985008"/>
         </scene>
         <!--MainMenu-->
         <scene sceneID="tne-QT-ifu">
