@@ -156,7 +156,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="deA-dG-18H" firstAttribute="leading" secondItem="d2W-4f-6OT" secondAttribute="leadingMargin" constant="50" id="3R7-N7-TQG"/>
-                            <constraint firstItem="deA-dG-18H" firstAttribute="top" secondItem="aeo-zF-sjh" secondAttribute="bottom" constant="17" id="KrG-RD-6zi"/>
+                            <constraint firstItem="deA-dG-18H" firstAttribute="top" secondItem="aeo-zF-sjh" secondAttribute="bottom" constant="22" id="KrG-RD-6zi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="deA-dG-18H" secondAttribute="trailing" constant="50" id="YGv-2Z-4eK"/>
                         </constraints>
                     </view>

@@ -39,6 +39,7 @@ class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
         drawView.delegate = self
         myView.addSubview(drawView)
         drawView.lineColor = UIColor.black
+        drawView.lineWidth = CGFloat(6)
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,7 +51,7 @@ class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
         drawView.lineOpacity = CGFloat(opacitySlider.value)
     }
     @IBAction func thicknessSliderValueDidChange(_ sender: Any) {
-        drawView.lineWidth = CGFloat(thicknessSlider.value)
+        drawView.lineWidth = CGFloat(thicknessSlider.value * 10 + 1)
     }
     
     
@@ -72,7 +73,7 @@ class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
         if inkY < 0 {
             inkY = inkY * -1.0
         }
-        let ink : CGFloat = (inkX + inkY) / 2250.0
+        let ink : CGFloat = (inkX + inkY) / (225.0 * (20 - drawView.lineWidth))
         inkProgress.progress = inkProgress.progress - Float(ink)
         if(inkProgress.progress <= 0) {
             drawView.drawingEnabled = false
