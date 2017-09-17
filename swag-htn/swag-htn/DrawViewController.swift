@@ -33,8 +33,8 @@ class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        drawView = SwiftyDrawView(frame: myView.frame)
+    override func viewDidAppear(_ animated: Bool) {
+        drawView = SwiftyDrawView(frame: myView.bounds)
         drawView.delegate = self
         myView.addSubview(drawView)
         drawView.lineColor = UIColor.black
