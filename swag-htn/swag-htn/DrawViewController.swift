@@ -13,12 +13,14 @@ class DrawViewController: UIViewController, SwiftyDrawViewDelegate {
     
     var drawView : SwiftyDrawView!
     
+    @IBOutlet weak var penButton: UIButton!
     @IBOutlet weak var myView: UIView!
     @IBOutlet weak var opacitySlider: UISlider!
     @IBOutlet weak var thicknessSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        penButton.setBackgroundImage(UIImage(named: "fountain-pen-close-up (2).png"), for: UIControlState.normal)
         //drawView = SwiftyDrawView(frame: myView.frame)
         //drawView = SwiftyDrawView(frame: self.view.frame)
         //drawView.delegate = self

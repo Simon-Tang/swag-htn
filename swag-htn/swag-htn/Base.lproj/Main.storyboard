@@ -79,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="-43.75" y="-771.49666666666656"/>
         </scene>
-        <!--Draw View Controller-->
+        <!--Collaborate-->
         <scene sceneID="4Iw-ma-f1f">
             <objects>
                 <viewController id="tqO-Js-yY7" customClass="DrawViewController" customModule="swag_htn" customModuleProvider="target" sceneMemberID="viewController">
@@ -125,22 +125,34 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyn-uq-bIJ" customClass="PaintView">
-                                <rect key="frame" x="313" y="72" width="46" height="30"/>
+                                <rect key="frame" x="321" y="72" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="deA-dG-18H">
+                                <rect key="frame" x="83" y="85" width="224" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozM-tq-Oh4">
+                                <rect key="frame" x="34" y="75" width="23" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Collaborate" id="ae3-sN-nvG"/>
                     <connections>
                         <outlet property="myView" destination="fDR-ck-Afn" id="YtP-FR-iNL"/>
                         <outlet property="opacitySlider" destination="6EK-ar-khU" id="5ff-8r-67Q"/>
+                        <outlet property="penButton" destination="oyn-uq-bIJ" id="ACJ-jS-YjB"/>
                         <outlet property="thicknessSlider" destination="MwQ-st-PNh" id="uT2-dd-1iP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vcg-QQ-NS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864.8" y="36.431784107946029"/>
+            <point key="canvasLocation" x="1863.2" y="34.632683658170919"/>
         </scene>
         <!--MainMenu-->
         <scene sceneID="tne-QT-ifu">
@@ -371,23 +383,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7g-B1-sEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="118" y="775"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="fYg-6j-S8y">
-            <objects>
-                <viewController id="m2m-mo-TSB" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="HJ1-ng-gU5"/>
-                        <viewControllerLayoutGuide type="bottom" id="idp-Q4-s4D"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ocG-fy-uRp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J8E-Jb-Tym" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
