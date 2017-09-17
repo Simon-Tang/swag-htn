@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P6h-Su-oRB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="P6h-Su-oRB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -128,9 +129,11 @@
                                 <rect key="frame" x="321" y="72" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="deA-dG-18H">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="deA-dG-18H">
                                 <rect key="frame" x="83" y="85" width="224" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="J6P-oE-eq5"/>
+                                </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozM-tq-Oh4">
                                 <rect key="frame" x="34" y="75" width="23" height="21"/>
@@ -141,9 +144,15 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="deA-dG-18H" firstAttribute="leading" secondItem="d2W-4f-6OT" secondAttribute="leadingMargin" constant="50" id="3R7-N7-TQG"/>
+                            <constraint firstItem="deA-dG-18H" firstAttribute="top" secondItem="aeo-zF-sjh" secondAttribute="bottom" constant="17" id="KrG-RD-6zi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="deA-dG-18H" secondAttribute="trailing" constant="50" id="YGv-2Z-4eK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Collaborate" id="ae3-sN-nvG"/>
                     <connections>
+                        <outlet property="inkProgress" destination="deA-dG-18H" id="Nwe-g0-kD7"/>
                         <outlet property="myView" destination="fDR-ck-Afn" id="YtP-FR-iNL"/>
                         <outlet property="opacitySlider" destination="6EK-ar-khU" id="5ff-8r-67Q"/>
                         <outlet property="penButton" destination="oyn-uq-bIJ" id="ACJ-jS-YjB"/>
@@ -290,7 +299,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FIT-rj-ttK" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lY4-wT-eQ6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lY4-wT-eQ6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
